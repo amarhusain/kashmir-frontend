@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.footer__list{
+    li{
+        color: aliceblue;
+        padding: 8px 0;
+    }
+}
