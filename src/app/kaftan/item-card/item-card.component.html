@@ -1,9 +1,9 @@
-<div class="item__card">
+<div class="item__card" *ngIf="item">
     <div class="item__card-image">
-        <img src="assets/images/kaftan/kaft3.webp" />
+        <img src="{{item.imgUrl}}" />
     </div>
     <div>
-        <p class="item__card-name">Coral White Printed Georgette Kaftan</p>
-        <p class="item__card-price">SR 150</p>
+        <p class="item__card-name">{{item.name}}</p>
+        <p class="item__card-price">$ {{item.price}}</p>
     </div>
 </div>
