@@ -38,23 +38,8 @@
         </div>
         <div class="item-list pl-2">
             <div class="flex flex-wrap">
-                <div class="w-1/3 pr-2">
-                    <app-item-card></app-item-card>
-                </div>
-                <div class="w-1/3 pl-2 pr-2">
-                    <app-item-card></app-item-card>
-                </div>
-                <div class="w-1/3 pl-2">
-                    <app-item-card></app-item-card>
-                </div>
-                <div class="w-1/3 pr-2">
-                    <app-item-card></app-item-card>
-                </div>
-                <div class="w-1/3 pl-2 pr-2">
-                    <app-item-card></app-item-card>
-                </div>
-                <div class="w-1/3 pl-2">
-                    <app-item-card></app-item-card>
+                <div class="w-1/3 pl-2 pr-2" *ngFor="let item of itemList">
+                    <app-item-card [item]="item"></app-item-card>
                 </div>
 
             </div>
