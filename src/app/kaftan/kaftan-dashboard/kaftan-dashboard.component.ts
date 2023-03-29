@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class KaftanDashboardComponent implements OnInit {
 
 
+	parvar = 'Initial value in parent';
+	count = 0;
+
 	constructor() { }
 
 	ngOnInit(): void {
@@ -87,5 +90,11 @@ export class KaftanDashboardComponent implements OnInit {
 			price: 1000
 		}
 	]
+
+
+	getChildData(event: any) {
+		this.parvar = event + this.count;
+		this.count++;
+	}
 
 }

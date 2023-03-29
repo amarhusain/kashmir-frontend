@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-item-card',
@@ -9,16 +9,18 @@ export class ItemCardComponent implements OnInit {
 
   @Input() item: any;
 
+  @Output() chname = new EventEmitter();
+
+
+  name = "I'm from child";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  //  item=  {
-  //   id: 101,
-  //     imgUrl: 'assets/images/kaftan/kaft1.webp',
-  //       name: 'Coral White Printed Georgette Kaftan',
-  //         price: 200
-  // }
+  onSendBtnClick() {
+    this.chname.emit(this.name);
+  }
 
 }

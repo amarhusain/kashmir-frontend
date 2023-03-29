@@ -3,7 +3,9 @@
         <img src="{{item.imgUrl}}" />
     </div>
     <div>
+        <button class="bg-red-600 text-white rounded-lg px-4 py-2" (click)="onSendBtnClick()">Send</button>
         <p class="item__card-name">{{item.name}}</p>
         <p class="item__card-price">$ {{item.price}}</p>
     </div>
+
 </div>
